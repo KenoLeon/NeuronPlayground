@@ -11,7 +11,7 @@ or AI/neuroscience folks wanting to see a basic neuron simulator in realtime,
 could also be used for teaching purposes.
 
 Code structure is not my finest but as mentioned the project was abandonded and so I never had time to
-come back and comment/refactor, hopefully class names and variables are good enoughself.
+come back and comment/refactor, hopefully class names and variables are good enough.
 
 Cheers !
 
