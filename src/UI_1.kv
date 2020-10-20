@@ -1,0 +1,36 @@
+GridLayout:
+    width: 200
+    padding: 4
+    cols: 4
+    Label:
+        color: 0.6,0.6,0.6,1
+        text: 'Grid Size'
+        font_size: 14
+        size_hint: None,None
+        height: 40
+    Button:
+        text: '-'
+        background_normal: ''
+        background_color: .2,.2,.2,1
+        size_hint: .25,None
+        height: 40
+        on_press: app.updateGrid(False)
+    Label:
+        canvas.before:
+            Color:
+                rgba: 0.2, 0.2, 0.2, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        color: 0.6,0.6,0.6,1
+        text: str(app.gridSize)
+        font_size: 14
+        size_hint: 0.25,0
+        height: 40
+    Button:
+        text: '+'
+        background_normal: ''
+        background_color: .2,.2,.2,1
+        size_hint: .25,None
+        height: 40
+        on_press: app.updateGrid(True)

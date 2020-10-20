@@ -1,0 +1,202 @@
+GridLayout:
+    cols: 1
+    padding: 4
+    spacing: 4
+
+    Button:
+        text: 'Clear All'
+        background_normal: ''
+        background_color: .2,.2,.2,1
+        size_hint: .25,None
+        height: 30
+        on_press: app.clearAll()
+
+    Button:
+        text: 'Clear Connections'
+        background_normal: ''
+        background_color: .2,.2,.2,1
+        size_hint: .25,None
+        height: 30
+        on_press: app.clearConnect()
+
+    ToggleButton:
+        id: playStop
+        font_size: 14
+        text: 'Play'
+        background_normal: ''
+        background_color: .2,.2,.2,1
+        height: 40
+        on_press: app.playStop()
+        on_state: self.text = 'Stop'if self.state == 'down' else 'Play'
+        size: 200, 40
+        size_hint: None, None
+
+    GridLayout:
+        width: 200
+        padding: 4
+        cols: 4
+        Label:
+            color: 0.6,0.6,0.6,1
+            text: 'FPS ~'
+            font_size: 14
+            size_hint: None,None
+            height: 40
+        Button:
+            text: '-'
+            background_normal: ''
+            background_color: .2,.2,.2,1
+            size_hint: .25,None
+            height: 40
+            on_press: app.updateFPS(False)
+        Label:
+            canvas.before:
+                Color:
+                    rgba: 0.2, 0.2, 0.2, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+            color: 0.6,0.6,0.6,1
+            text: str(app._FPS)
+            font_size: 14
+            size_hint: 0.25,0
+            height: 40
+        Button:
+            text: '+'
+            background_normal: ''
+            background_color: .2,.2,.2,1
+            size_hint: .25,None
+            height: 40
+            on_press: app.updateFPS(True)
+    Widget:
+        size: 200, 44
+        size_hint: None, None
+
+    ToggleButton:
+        id: placeToggle
+        font_size: 14
+        group: "controls_1"
+        text: 'Place'
+        background_normal: ''
+        background_color: .2,.2,.2,1
+        height: 40
+        on_press: app.togglePlace()
+        size: 200, 40
+        size_hint: None, None
+        state: 'down'
+    ToggleButton:
+        id: connectToggle
+        font_size: 14
+        group: "controls_1"
+        text: 'Connect'
+        background_normal: ''
+        background_color: .2,.2,.2,1
+        height: 40
+        on_press: app.toggleConnect()
+        size: 200, 40
+        size_hint: None, None
+    Label:
+        text: 'Connection Type:'
+        height: 40
+        size: 200, 40
+        size_hint: None, None
+    ToggleButton:
+        id: connectToggle
+        font_size: 14
+        group: "c_Type"
+        text: 'Excitatory'
+        background_normal: ''
+        background_color: .2,.2,.2,1
+        height: 40
+        state: 'down'
+        on_press: app.updateCTYPE(False)
+        size: 200, 40
+        size_hint: .25, None
+    ToggleButton:
+        id: connectToggle
+        font_size: 14
+        group: "c_Type"
+        text: 'Inhibitory'
+        background_normal: ''
+        background_color: .2,.2,.2,1
+        height: 40
+        on_press: app.updateCTYPE(True)
+        size: 200, 40
+        size_hint: .25, None
+
+    GridLayout:
+        width: 200
+        padding: 4
+        cols: 4
+        Label:
+            color: 0.6,0.6,0.6,1
+            text: 'Base NT Level'
+            font_size: 14
+            size_hint: None,None
+            height: 40
+        Button:
+            text: '-'
+            background_normal: ''
+            background_color: .2,.2,.2,1
+            size_hint: .25,None
+            height: 40
+            on_press: app.updateBNTL(False)
+        Label:
+            canvas.before:
+                Color:
+                    rgba: 0.2, 0.2, 0.2, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+            color: 0.6,0.6,0.6,1
+            text: str(app._BNTL/10)
+            font_size: 14
+            size_hint: 0.25,0
+            height: 40
+        Button:
+            text: '+'
+            background_normal: ''
+            background_color: .2,.2,.2,1
+            size_hint: .25,None
+            height: 40
+            on_press: app.updateBNTL(True)
+
+    Widget:
+        size: 200, 40
+        size_hint: None, None
+
+    GridLayout:
+        width: 200
+        padding: 4
+        cols: 4
+        Label:
+            color: 0.6,0.6,0.6,1
+            text: 'Conn.Weight'
+            font_size: 14
+            size_hint: None,None
+            height: 40
+        Button:
+            text: '-'
+            background_normal: ''
+            background_color: .2,.2,.2,1
+            size_hint: .25,None
+            height: 40
+            on_press: app.updateConnWeight(False)
+        Label:
+            canvas.before:
+                Color:
+                    rgba: 0.2, 0.2, 0.2, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+            color: 0.6,0.6,0.6,1
+            text: str(app._CONN_WEIGHT/10)
+            font_size: 14
+            size_hint: 0.25,0
+            height: 40
+        Button:
+            text: '+'
+            background_normal: ''
+            background_color: .2,.2,.2,1
+            size_hint: .25,None
+            height: 40
+            on_press: app.updateConnWeight(True)
