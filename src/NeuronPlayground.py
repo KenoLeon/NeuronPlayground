@@ -5,7 +5,7 @@ See Readme on Github repo for documentation.
 Author: Eugenio (Keno) N. Leon
 License: MIT
 
-Notes: This was WIP 020 from a now superseded spec done in late 2016 but I felt there was
+Notes: This was WIP 020 from a now superseded spec done in late 2019 but I felt there was
 enough here for either KIVY folks wanting to see a full fledged app
 or AI/neuroscience folks wanting to see a basic neuron simulator in realtime,
 could also be used for teaching purposes.
