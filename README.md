@@ -14,7 +14,7 @@ You can start by placing some neurons and hitting the play/stop button:
 ![Place_neurons](img/place_neurons.gif)
 
 
-These neurons (the circles) have a base neurotransmitter level (the grey color fill) and slowly fill up until the discharge an action potential (the rate is fixed for simplicity)
+These neurons (the circles) have a base neurotransmitter level (the grey color fill) and slowly fill up until they discharge an action potential (the rate is fixed for simplicity)
 
 
 # Running and packaging :
