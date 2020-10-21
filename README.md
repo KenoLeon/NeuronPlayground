@@ -19,7 +19,13 @@ You can then connect the neurons :
 
 ![Connect_neurons](img/connect_neurons.gif)
 
-Connection weights can be changed per connection but are static once more for simplicity, in real life they change based on the inputs.
+Connection weights can be changed per connection but are static (once more for simplicity), in real life they change based on the inputs (here we just have a basic oscillation per neuron ). connections propagate when the neurons fire and are indicated in white, the connection weight is also indicated by the thick part of the connecting line.
+
+You can choose excitatory (red) or Inhibitory (blue) connections :
+
+![Inhibit_neurons](img/inhibit_neuron.gif)
+
+Here 3 inhibitory neurons synapse with another neuron that won't fire anymore, you can play with NT levels and conn weights
 
 # Running and packaging :
 
